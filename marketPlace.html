@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DoriumLand City Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1400px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">location_city</span>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white uppercase">DoriumLand</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-lg">map</span> Map
+                    </a>
+<a class="text-sm font-semibold text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-lg">storefront</span> Marketplace
+                    </a>
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span> Wallet
+                    </a>
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-lg">eco</span> ESG Impact
+                    </a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex flex-col items-end">
+<span class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Your Balance</span>
+<span class="text-primary font-bold">12,450 SoBz</span>
+</div>
+<button class="bg-primary text-background-dark px-5 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+                    Connect Wallet
+                </button>
+<div class="size-10 rounded-full border-2 border-primary/30 p-0.5">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="User profile avatar icon placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuk1dvJhshXl8ES3EBXaTIRLsdvN944ee4tbFjtVvp6TSTAviNTjF_rECc8JCQiPBgNsAarnRNw-plfNlQM8T0kfdgA1sUgRcNo243o641wZiOR7pE2L1akNoDZ-DqWf6xeiLWVPKHGn8O5fl5JRwlmcBe9BUKBoq_rNfbQaw9iLDUzBFDw9SyVjQkN8gCpmGEZD5xK8pP4Uk8Uel4DY0wOqMlZEH9mzxkSTrdXzK1Emn5v70e5gZqRo48XbAIcfHd3H8M0-uYa9Pg')"></div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1400px] mx-auto px-6 py-8">
+<!-- Hero Billboard -->
+<section class="relative w-full h-[320px] rounded-xl overflow-hidden mb-12 bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="Futuristic sustainable city landscape with glowing green lights" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRBqEiH6aqkp0qQqvY6n1Ey6ELxb75Mr0K1sMR40xbT5J4wuMqgzwE1Sarh_T_dwvLikZThUs9g0GwWMsonZ5QavX6N9Up-rYAO2GxvohOq4pju2zyGZmPrI5HSPhkOgYYJHtH_0h2UZrI3zACkTzCdQCDSNhDicQf70rgD5EcCdu5NuvDpJxFtWo7EWTqvSOoFOtC0Vy6dtV8cGYaUQGUhOq4ncfbCxl5cAH4x8DLq1CdfBp2uhWcUmiJSd-4Ibmkg-8dPCPQ8TQl')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-10 max-w-2xl">
+<span class="bg-primary text-background-dark px-3 py-1 rounded-full text-xs font-black uppercase w-fit mb-4 tracking-widest">Global ESG Node</span>
+<h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-4">The Future of City Assets is Green.</h2>
+<p class="text-slate-300 text-lg">Invest in Real World Assets, DePIN infrastructure, and certified Gold NFTs to build a sustainable digital city.</p>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<div class="bg-white/5 border border-white/10 p-6 rounded-xl flex items-center gap-5">
+<div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">forest</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">City Carbon Offset</p>
+<p class="text-2xl font-bold">4.8k Tons <span class="text-primary text-sm font-normal">+12%</span></p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 p-6 rounded-xl flex items-center gap-5">
+<div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">router</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Active DePIN Nodes</p>
+<p class="text-2xl font-bold">12,892 <span class="text-primary text-sm font-normal">+4.2%</span></p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 p-6 rounded-xl flex items-center gap-5">
+<div class="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Marketplace Volume</p>
+<p class="text-2xl font-bold">2.4M SoBz <span class="text-primary text-sm font-normal">+21%</span></p>
+</div>
+</div>
+</section>
+<!-- Category: Gold NFT -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+<h3 class="text-2xl font-bold">Gold Tier NFTs</h3>
+</div>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All Category</a>
+</div>
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-4">
+<!-- Card 1 -->
+<div class="min-w-[300px] flex-1 bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all group">
+<div class="h-48 bg-cover bg-center" data-alt="Premium shiny gold bullion bars 3D render" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpNYpT_Zuy5OMNFS1XjsvYnEUUR8wU8iac1OJP-rHmbtHrvxHBNxgxbBdahsfb5bLakJZ2wfKFfskWqBcdGtrPFytiejXJA17nn8yEKp14v3Mr9-HG9OtvOgAn7yy8vy1cHCRmpjjXsZFI7h6YBVfPkiV9HwiGh3j9dk2lT206k_O8JVMBXu-bhvuND2S7XyYezx_1WwheVZWfdze2FF8e_uHnDCU7A3GRxIc8l2H-pdwqJ3uH0CcjAAkcSdy67uPlHNToxin-mDgy')"></div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg">Imperial Vault Gold</h4>
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded">PHYSICAL BACKED</span>
+</div>
+<p class="text-slate-400 text-xs mb-4 line-clamp-2">Direct ownership of 1oz LBMA certified gold held in the City Central Vault.</p>
+<div class="flex items-center justify-between">
+<div class="text-primary font-bold text-lg">2,450 SoBz</div>
+<button class="bg-white/10 hover:bg-primary hover:text-background-dark p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[300px] flex-1 bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all group">
+<div class="h-48 bg-cover bg-center" data-alt="Fractional gold certificate digital NFT art" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtR8lDvo3mrH9y4LIsB-O4tx3A69VkOqzeIPAErb9ok5OXAN_Mzwa9K6PqwnZ30G4LSIi-RYsuczlH452Sbkg5EwSDwdZsQZrhrgwPB7Ip286DaZOrJ04GnZv0sBoZrFxntdptMEEQGsJVlXHuxknKSC2x8DyCo7fuVtH8-ivJjUieMN36R8d5ahXmjrwONndp2pDk0bywJlmb8S3xhkAqoAFiZVNIZSHveET-_chDHjIjDdsMiAyAE9jBWa7pAlWI2wlMa_rgfN9G')"></div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg">Micro-Gold Fraction</h4>
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded">NFT</span>
+</div>
+<p class="text-slate-400 text-xs mb-4 line-clamp-2">Participate in gold liquidity with as little as 0.1g equivalent in NFT form.</p>
+<div class="flex items-center justify-between">
+<div class="text-primary font-bold text-lg">320 SoBz</div>
+<button class="bg-white/10 hover:bg-primary hover:text-background-dark p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[300px] flex-1 bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all group">
+<div class="h-48 bg-cover bg-center" data-alt="Sovereign gold bullion with holographic seal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW_m343678K8BOB7xoaqc3RgLu2lag7IZ9Buy3g5TF7emioua90HE3hWTQGLA7xDz_9DjxfD0PjnD1GoNNrS8C-hcYzAUkdMqqAwvfXa9LOE1d7WJBNKgHdROTKTuFzA9Vw5XwkveCuGFVSwooBtCho-ltWB57-7jTvIrUbJXgFCf8B9HyKGi0YzUwsu1VjwHadChcGLkvc_SEQRV_NvGrtNCbERgOk4LDZR4Bkk-aHJLrQbLgnd4XhSAcEbpSqdKEkvuSwtz7uTho')"></div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg">Sovereign Reserve</h4>
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded">LIMITED</span>
+</div>
+<p class="text-slate-400 text-xs mb-4 line-clamp-2">Special edition reserve bars minted specifically for the DoriumLand treasury.</p>
+<div class="flex items-center justify-between">
+<div class="text-primary font-bold text-lg">5,100 SoBz</div>
+<button class="bg-white/10 hover:bg-primary hover:text-background-dark p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="min-w-[300px] flex-1 bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all group">
+<div class="h-48 bg-cover bg-center" data-alt="Futuristic digital gold certificate card" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTbfdTsjbEffbHJn6Om3pLrfxL0DhERD6FjCs2gRIO4f23j08kSLRsmqeK-kU0S2MUL3aa8ZaM4JF-exF-gG1h0pnAHnej2b3phJX2upx2SbLGGZf1RL9QcUsKCs8FjuHh-HBB0XWPWOB3MTvcBUdAnhFU7P9Bk-8Vb6KxLFvwV04FsVc5sno4yiN3OZ2SY5SDu-3hToJHuGlaEcBswnSnTz4wJKbxgiH-ybKIn6d661gw4nAOP3z18-wYmUINw0zRHXjmgS6fHE9s')"></div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg">City Gold Bond</h4>
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded">YIELD</span>
+</div>
+<p class="text-slate-400 text-xs mb-4 line-clamp-2">Yield-bearing gold certificates supporting city expansion projects.</p>
+<div class="flex items-center justify-between">
+<div class="text-primary font-bold text-lg">1,200 SoBz</div>
+<button class="bg-white/10 hover:bg-primary hover:text-background-dark p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: RWA & DePIN -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">apartment</span>
+<h3 class="text-2xl font-bold">RWA &amp; DePIN Infrastructure</h3>
+</div>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All Category</a>
+</div>
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-4">
+<!-- Card 1 -->
+<div class="min-w-[340px] flex-1 bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all group">
+<div class="h-44 bg-cover bg-center" data-alt="High tech solar array on a modern skyscraper" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXheB2uhea9S2btzHy_eBnfW7rQ3DWGSb7QaxyQFsr2FQ541FM2tS1l5TxYzLUqNNagzI0LAj-3nEolIKaC7LHIK-x17mJAfAkdwlTzsIxKlaRumq-IB6lyVD4NRwZsJ3ehFwafArggOfOxQo68KiLbREHfKG3yNblYfU28H6BkfAuvsqtVfhcFS0CrhZOb7vIVXKr5GOKkyoSReOlVp_NOmoep97mWpwR9ax2gDB8IGNsdyEK9BDXHG7ATMBygBOsAq97Bv6Q-zNs')"></div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-bold text-lg leading-tight">Solar Node X-1</h4>
+<div class="flex items-center gap-1 text-slate-500 text-[10px] mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> SECTOR 4 DISTRICT
+                                </div>
+</div>
+<span class="bg-white/10 text-white text-[10px] font-bold px-2 py-0.5 rounded">DEPIN</span>
+</div>
+<div class="flex gap-4 my-4">
+<div class="flex-1 bg-white/5 p-2 rounded text-center">
+<p class="text-[10px] text-slate-500 uppercase">Yield</p>
+<p class="text-xs font-bold text-primary">8.5% APY</p>
+</div>
+<div class="flex-1 bg-white/5 p-2 rounded text-center">
+<p class="text-[10px] text-slate-500 uppercase">Capacity</p>
+<p class="text-xs font-bold">12 kW</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="text-primary font-bold text-lg">1,850 SoBz</div>
+<button class="bg-primary text-background-dark px-4 py-1.5 rounded-lg text-xs font-bold transition-all">
+                                INVEST
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[340px] flex-1 bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all group">
+<div class="h-44 bg-cover bg-center" data-alt="Vertical aeroponic farming facility interior" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhvMvN_YjZFDPl_BJD6U6n_v2o0lCUP23AosdDfWILl3Xmzc86wAbIG9kzoK3VjEwQqeWHvTH3BD82PBYhDDARtrmoUatE4Qpx-O3-d8tSYWXEBdK0L0CjIfLxDQNwx3RmeXhxfZ47VVQM5wA-LNVFXedBdgWqsYpYBRiwSPWRIlHyZ0whx8vTgZbELxrEuzK-Mq-k2S1ugwS3ECixAXfQxp-qcSurA6iFEV9Qknd42ZE2nfHhA9q0YJlpDDp9R20U8bSbu3jekh7X')"></div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-bold text-lg leading-tight">Vertical Farm Share</h4>
+<div class="flex items-center gap-1 text-slate-500 text-[10px] mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> GREEN BELT
+                                </div>
+</div>
+<span class="bg-white/10 text-white text-[10px] font-bold px-2 py-0.5 rounded">RWA</span>
+</div>
+<div class="flex gap-4 my-4">
+<div class="flex-1 bg-white/5 p-2 rounded text-center">
+<p class="text-[10px] text-slate-500 uppercase">Impact</p>
+<p class="text-xs font-bold text-primary">High ESG</p>
+</div>
+<div class="flex-1 bg-white/5 p-2 rounded text-center">
+<p class="text-[10px] text-slate-500 uppercase">Type</p>
+<p class="text-xs font-bold">Equity</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="text-primary font-bold text-lg">3,400 SoBz</div>
+<button class="bg-primary text-background-dark px-4 py-1.5 rounded-lg text-xs font-bold transition-all">
+                                INVEST
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[340px] flex-1 bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all group">
+<div class="h-44 bg-cover bg-center" data-alt="Electric vehicle fast charging hub at night" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBA23laNGuyhql3_CyfpZojOLbbFpBZSWk4FsFo1UHizux7YAF5ESDXo8ii9greTjZW0ZvFyrLAZnI6g6vgV9gFcw9-qe_eh7rpRtuYsqPFVqyd4LaG3TbceSles3VLV74fEtgBJfU610YEM_OBqdWsbyl5hOWMdJ22tc__tXoWaD88yk-IHefsD7F5UqqMw2O8J2g3C3pWCULIDGSl2AyQ_zAOKcksmDSMW-JBAvMJhrIs8EovFQiKH0aQj6dXxVPoH75pGI9pPr_Y')"></div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-bold text-lg leading-tight">EV Mesh Network</h4>
+<div class="flex items-center gap-1 text-slate-500 text-[10px] mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> TRANSIT HUB
+                                </div>
+</div>
+<span class="bg-white/10 text-white text-[10px] font-bold px-2 py-0.5 rounded">DEPIN</span>
+</div>
+<div class="flex gap-4 my-4">
+<div class="flex-1 bg-white/5 p-2 rounded text-center">
+<p class="text-[10px] text-slate-500 uppercase">Revenue</p>
+<p class="text-xs font-bold text-primary">Tx Fees</p>
+</div>
+<div class="flex-1 bg-white/5 p-2 rounded text-center">
+<p class="text-[10px] text-slate-500 uppercase">Uptime</p>
+<p class="text-xs font-bold">99.9%</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="text-primary font-bold text-lg">950 SoBz</div>
+<button class="bg-primary text-background-dark px-4 py-1.5 rounded-lg text-xs font-bold transition-all">
+                                INVEST
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Green Products -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">energy_savings_leaf</span>
+<h3 class="text-2xl font-bold">Green Biofuel &amp; Carbon Credits</h3>
+</div>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All Category</a>
+</div>
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-4">
+<!-- Card 1 -->
+<div class="min-w-[280px] flex-1 bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col gap-4">
+<div class="aspect-square bg-white/5 rounded-lg flex items-center justify-center relative">
+<span class="material-symbols-outlined text-7xl text-primary/40">oil_barrel</span>
+<div class="absolute top-2 right-2 bg-primary text-background-dark px-2 py-1 rounded text-[10px] font-black">BIOFUEL</div>
+</div>
+<div>
+<h4 class="font-bold">HVO Renewable Diesel</h4>
+<p class="text-slate-500 text-xs mt-1">100L Smart Voucher for City Logistics</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+<span class="font-bold text-primary">450 SoBz</span>
+<button class="text-xs font-bold border border-primary/40 hover:bg-primary/20 px-3 py-1 rounded transition-all">REDEEM</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] flex-1 bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col gap-4">
+<div class="aspect-square bg-white/5 rounded-lg flex items-center justify-center relative">
+<span class="material-symbols-outlined text-7xl text-primary/40">co2</span>
+<div class="absolute top-2 right-2 bg-primary text-background-dark px-2 py-1 rounded text-[10px] font-black">CARBON</div>
+</div>
+<div>
+<h4 class="font-bold">Verified Offset Credit</h4>
+<p class="text-slate-500 text-xs mt-1">1 Metric Ton Carbon Credit (Gold Standard)</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+<span class="font-bold text-primary">120 SoBz</span>
+<button class="text-xs font-bold border border-primary/40 hover:bg-primary/20 px-3 py-1 rounded transition-all">PURCHASE</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[280px] flex-1 bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col gap-4">
+<div class="aspect-square bg-white/5 rounded-lg flex items-center justify-center relative">
+<span class="material-symbols-outlined text-7xl text-primary/40">water_drop</span>
+<div class="absolute top-2 right-2 bg-primary text-background-dark px-2 py-1 rounded text-[10px] font-black">UTILITY</div>
+</div>
+<div>
+<h4 class="font-bold">Purified Water Rights</h4>
+<p class="text-slate-500 text-xs mt-1">500 Gallon Allocation for District 3</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+<span class="font-bold text-primary">75 SoBz</span>
+<button class="text-xs font-bold border border-primary/40 hover:bg-primary/20 px-3 py-1 rounded transition-all">PURCHASE</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="min-w-[280px] flex-1 bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col gap-4">
+<div class="aspect-square bg-white/5 rounded-lg flex items-center justify-center relative">
+<span class="material-symbols-outlined text-7xl text-primary/40">compost</span>
+<div class="absolute top-2 right-2 bg-primary text-background-dark px-2 py-1 rounded text-[10px] font-black">WASTE</div>
+</div>
+<div>
+<h4 class="font-bold">Bio-Waste Token</h4>
+<p class="text-slate-500 text-xs mt-1">Recycling Credit for Industrial Use</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+<span class="font-bold text-primary">180 SoBz</span>
+<button class="text-xs font-bold border border-primary/40 hover:bg-primary/20 px-3 py-1 rounded transition-all">PURCHASE</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-20 border-t border-white/10 bg-white/5 py-12">
+<div class="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">location_city</span>
+<h1 class="text-xl font-black uppercase">DoriumLand</h1>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+                    The integrated ESG marketplace for the future digital city. Transparency, sustainability, and real-world impact through blockchain technology.
+                </p>
+</div>
+<div>
+<h5 class="font-bold mb-6">Platform</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Marketplace Overview</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">City Roadmap</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">DePIN Protocol</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Governance Docs</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Community</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Citizen Discord</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Developer Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Grants Program</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Impact Reports</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Support</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact City Hall</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Legal &amp; Compliance</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Security Audit</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1400px] mx-auto px-6 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500">© 2024 DoriumLand Ecosystem. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">groups</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">rss_feed</span></a>
+</div>
+</div>
+</footer>
+</body></html>
