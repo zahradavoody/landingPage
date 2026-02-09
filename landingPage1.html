@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DoriumLand | Sustainable Digital City</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(19, 236, 19, 0.2);
+        }
+        .district-line {
+            background: linear-gradient(180deg, #13ec13 0%, rgba(19, 236, 19, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-primary/20">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">domain</span>
+</div>
+<h1 class="text-2xl font-800 tracking-tighter text-slate-900 dark:text-white">Dorium<span class="text-primary">Land</span></h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#city-gate">City Gate</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#production">Production</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#brain">Brain</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 text-sm font-bold hover:text-primary transition-colors">Login</button>
+<button class="bg-primary text-background-dark px-6 py-2.5 rounded-lg text-sm font-bold glow-effect hover:brightness-110 transition-all">
+                    Register
+                </button>
+</div>
+</div>
+</header>
+<main class="relative">
+<!-- Progress Indicator Decor -->
+<div class="fixed left-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-4 z-40">
+<div class="w-px h-24 district-line"></div>
+<div class="size-2 rounded-full bg-primary"></div>
+<div class="size-2 rounded-full bg-primary/20"></div>
+<div class="size-2 rounded-full bg-primary/20"></div>
+<div class="size-2 rounded-full bg-primary/20"></div>
+</div>
+<!-- Section 1: City Gate (Hero) -->
+<section class="min-h-screen flex items-center pt-20 px-6" id="city-gate">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">City Status: Online</span>
+</div>
+<h2 class="text-6xl md:text-7xl font-800 leading-[1.1] tracking-tight text-slate-900 dark:text-white">
+                        The Sustainable <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">Future of Wealth</span>
+</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
+                        A digital ecosystem built for people, not just profits. Experience an Economy-as-a-Service model where growth sustains the community.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-background-dark px-8 py-4 rounded-xl text-lg font-bold glow-effect hover:scale-105 transition-all">
+                            Create Wealth Sustainably
+                        </button>
+<button class="border border-slate-300 dark:border-primary/30 px-8 py-4 rounded-xl text-lg font-bold hover:bg-primary/5 transition-all">
+                            View Roadmap
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
+<div class="relative bg-slate-200 dark:bg-slate-800 rounded-3xl overflow-hidden aspect-square shadow-2xl border border-white/10">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-80" data-alt="Minimalist 3D digital city illustration with green neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNVj6IlK1STSjySS3DJuFEyBonugZ-XbvHJ58ee6R7z1gjB9vNO9mwk9VDGw_Rf5SuUcjAlfxyoKiAePOSLDwtFtjweKJAtc0RTesBsAnfUOQsjE_sSjmYQkkOYBy8Dt--6KJl7R9lquaT-NZN3zWjBa28D80vtfbVSL8XwP_QBRMPz7G4Mvx8zJmewhXTyoNydAkqeo_wxL6bcMNG2HiteMfXefSwGmuVwM_Td9idcg9jd5kEocBJ32JfsHrm4FW08WqHQaXmao57"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-xs text-primary font-bold uppercase mb-1">Gate 01</p>
+<p class="text-xl font-bold">Main Entry Point</p>
+</div>
+<span class="material-symbols-outlined text-primary scale-150">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: City Production -->
+<section class="py-32 px-6 bg-slate-100 dark:bg-[#152a15]" id="production">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h3 class="text-primary font-bold uppercase tracking-widest mb-4">District 01: Production</h3>
+<h2 class="text-4xl md:text-5xl font-800 mb-6">Sustainable Asset Creation</h2>
+<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Focused on value creation and asset management using state-of-the-art digital infrastructure that leaves a zero-carbon footprint.
+                        </p>
+</div>
+<div class="flex gap-4">
+<div class="size-16 rounded-2xl bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">factory</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature Card 1 -->
+<div class="group p-8 rounded-3xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-500">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">token</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Digital Assets</h4>
+<p class="text-slate-600 dark:text-slate-400">Secure representation of value in a transparent ledger system.</p>
+<hr class="my-6 border-slate-100 dark:border-primary/5"/>
+<div class="flex items-center text-primary text-sm font-bold gap-2 cursor-pointer">
+                            Learn More <span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</div>
+<!-- Feature Card 2 -->
+<div class="group p-8 rounded-3xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-500">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Asset Minting</h4>
+<p class="text-slate-600 dark:text-slate-400">Low-impact creation tools for the next generation of digital owners.</p>
+<hr class="my-6 border-slate-100 dark:border-primary/5"/>
+<div class="flex items-center text-primary text-sm font-bold gap-2 cursor-pointer">
+                            Learn More <span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</div>
+<!-- Feature Card 3 -->
+<div class="group p-8 rounded-3xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10 hover:border-primary transition-all duration-500">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Growth Engines</h4>
+<p class="text-slate-600 dark:text-slate-400">Scalable production protocols for a thriving digital economy.</p>
+<hr class="my-6 border-slate-100 dark:border-primary/5"/>
+<div class="flex items-center text-primary text-sm font-bold gap-2 cursor-pointer">
+                            Learn More <span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: City Brain -->
+<section class="py-32 px-6" id="brain">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full"></div>
+<div class="grid grid-cols-2 gap-4 relative">
+<div class="space-y-4 pt-8">
+<div class="bg-slate-200 dark:bg-slate-800 p-1 rounded-2xl">
+<img class="rounded-xl w-full aspect-square object-cover" data-alt="Digital neural network abstract blue and green background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf3fewt3ehcd8e3nxSQEoMgAd_NRoWKu6ZF2CWGalU_sTtEz4OaAOAD9nTv7ju6pMqlTWyZDs87JP7aMWu_QqWuJj_GNOxssYBZX5YoKIeZUoUJKT0_xh5I0lQ8L6lYPAR8RvfCeqex4NFo0ceaBH-7wV7kLFwleqI7pJp2nfYFmhw0-gcKYP0XKcMUyFTxyN04OhyGBs2JSfx0C4sblcI0rYwiP1PVw-k7yq9Mr1ZRjALilUlUK5SngtZJcnmxUoMTqeF0AgBQzAv"/>
+</div>
+<div class="bg-primary p-8 rounded-2xl text-background-dark">
+<p class="text-4xl font-800">99.9%</p>
+<p class="text-sm font-bold uppercase">Uptime Reliability</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-slate-800 p-8 rounded-2xl border border-primary/20">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">psychology</span>
+<p class="text-xl font-bold text-white">Logic Layer</p>
+<p class="text-slate-400 text-sm mt-2">The core intelligence driving every transaction.</p>
+</div>
+<div class="bg-slate-200 dark:bg-slate-800 p-1 rounded-2xl">
+<img class="rounded-xl w-full aspect-[4/5] object-cover" data-alt="Glowing earth from space representing global data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANAXPoGxWeEbd5bnJbl-kJn3Swo0O0rISfywhFQXf85h6Dq6S1IBadQr0_WNAkE2MNIVcHFW65d8hthX7LGAqeEWCiqDzwlKyqGfNvQgo0vrG7FEfewZQB3_I8e97spFPCeoSM9q1L_aNoeB12hYXthVc0ufzPVt5dqQ4s0jIoyZH4EXexORloDt_yI6fdgdoXD6TFxdfnUA7xwTJWGNxRtI1JZJimLRPMFSHdV3hfejk-fQEc4j4WohXHednh6cs7m2D2YT__oSqr"/>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex flex-col gap-8">
+<h3 class="text-primary font-bold uppercase tracking-widest">District 02: Brain</h3>
+<h2 class="text-5xl md:text-6xl font-800">Governance Powered by Intelligence</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            The intelligence hub of DoriumLand. Our neural networks ensure transparent community-led decision making and efficient resource allocation.
+                        </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="size-6 rounded-full bg-primary/20 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h5 class="font-bold">Smart Governance</h5>
+<p class="text-slate-500 text-sm">Decentralized protocols that value every citizen's voice.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="size-6 rounded-full bg-primary/20 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h5 class="font-bold">AI Optimization</h5>
+<p class="text-slate-500 text-sm">Maximizing yields through predictive ecological modeling.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="size-6 rounded-full bg-primary/20 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<h5 class="font-bold">Data Logic</h5>
+<p class="text-slate-500 text-sm">Structured data for city-wide intelligence and security.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: City Services -->
+<section class="py-32 px-6 bg-background-light dark:bg-[#0c180c]" id="services">
+<div class="max-w-7xl mx-auto text-center mb-20">
+<h3 class="text-primary font-bold uppercase tracking-widest mb-4">District 03: Services</h3>
+<h2 class="text-5xl font-800 mb-6">Designed for Living</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    Essential public infrastructure and community utilities for the modern digital citizen. Life in DoriumLand is seamless and supported.
+                </p>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="relative group rounded-3xl overflow-hidden aspect-[4/5] bg-slate-800">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Digital community hub showing people collaborating virtually" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApnf7TrjZLFWQ2Cc1QNzTJOtM7jaGgtBB66HO1MAUquHXTDhvp6FJK5bysRb4O09sUj2FpmnWZnF7xQmU_7JIN8wPHgz_UMpN8iv7pCBH5dgHezWBVlGvX-kQaDpyGrwaCAqjH6tP-smUuTLJ-HI0rjBHjBDQkwrKhF32HzYVOtaj6f53B9GLzl4JOoMqWOXIZneHBDn88RksvCA8rlRB0xJ9gX-VI46S_PG7hfDG3gkM8c0XHk62T3x_AV_1xUmmpij67nczY6cI_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="size-12 rounded-xl bg-primary/20 backdrop-blur-md flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h4 class="text-2xl font-bold mb-2">Community Hubs</h4>
+<p class="text-slate-300">Connect with fellow citizens in collaborative virtual spaces.</p>
+</div>
+</div>
+<div class="relative group rounded-3xl overflow-hidden aspect-[4/5] bg-slate-800">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Abstract interface showing digital utilities and city metrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb2BEq2KINIMsVanJ7gtQ2vuLg5HI4F1IWIHj1O4OxBS7Vy1zFIc_JVcJuF_4BIThIZcpAzJZGilVHJcVkUhRLlliIHdMDDltNcHDwv4qELkXBji5ptRzDliDXknmXMa3qB1axRvZZn__Dlw6teQ5hXQkJYsJeohOKWxCckGQ9Quq_ZDZsYzzahRKkpoBf5v0eRx7t59AjxrwTvpFMLKlDEN7YOLm-UMa1-LJZMi4935OHyvw02BXQI5Jc1XcHHGn1oLRua04VNFbL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="size-12 rounded-xl bg-primary/20 backdrop-blur-md flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined">settings_input_component</span>
+</div>
+<h4 class="text-2xl font-bold mb-2">Digital Utilities</h4>
+<p class="text-slate-300">Access critical city services and API frameworks seamlessly.</p>
+</div>
+</div>
+<div class="relative group rounded-3xl overflow-hidden aspect-[4/5] bg-slate-800">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Modern digital infrastructure geometric architectural lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARhJbNZqmpzgyuWxpHVkf4y_qHZJ5T9sBff_XThjkxWDcFWq7J4ra_CZ7fjSOy50Be16ApTUv3ro3K-GEaFP3phXzqJQfaNkqt4CGVlTSii3VSAIlm-WmR2zzZ_abOGoLZuFVeQUH_RuNOWYYqACqVFfSv0cWe1NHfvENQraAYgyZ-d9EwUt5Qrb5JNA1u4aqxTE67iXBRkRkXRxGbOX7iBHfypHx2SA-32xeQEgv8qVKiIUIZ4ZW4QaFPH9kSpwz9qMPXm9ZeRkl1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="size-12 rounded-xl bg-primary/20 backdrop-blur-md flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h4 class="text-2xl font-bold mb-2">Public Infra</h4>
+<p class="text-slate-300">Robust frameworks for digital life and secure transactions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 px-6">
+<div class="max-w-5xl mx-auto bg-primary rounded-[3rem] p-12 md:p-24 text-center text-background-dark relative overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 size-96 bg-white/20 blur-3xl rounded-full"></div>
+<div class="relative z-10">
+<h2 class="text-5xl md:text-6xl font-800 mb-8 tracking-tight">Ready to enter <br/> DoriumLand?</h2>
+<p class="text-xl font-medium mb-12 max-w-xl mx-auto opacity-80">
+                        Join thousands of digital citizens building the most sustainable wealth ecosystem on the planet.
+                    </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-background-dark text-white px-10 py-5 rounded-2xl text-lg font-bold hover:scale-105 transition-all">
+                            Claim Your Space
+                        </button>
+<button class="bg-white/20 backdrop-blur-md text-background-dark px-10 py-5 rounded-2xl text-lg font-bold border border-white/30 hover:bg-white/30 transition-all">
+                            Contact Support
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-primary/10 py-20 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined text-sm font-bold">domain</span>
+</div>
+<h2 class="text-xl font-800 tracking-tighter">DoriumLand</h2>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        Built for the future. An Ecosystem-as-a-Service digital city focused on sustainable wealth creation and community governance.
+                    </p>
+</div>
+<div>
+<h5 class="font-bold mb-6">Districts</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">City Gate</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Production District</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Brain Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Services Hub</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Resources</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Documentation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Eco-Report</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Whitepaper</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API Keys</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Connect</h5>
+<div class="flex gap-4">
+<a class="size-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="size-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+<a class="size-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 dark:border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500 font-medium">© 2024 DoriumLand Ecosystem. All Rights Reserved.</p>
+<div class="flex gap-6 text-xs text-slate-500 font-medium">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Cookie Settings</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
